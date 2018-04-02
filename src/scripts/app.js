@@ -1,4 +1,28 @@
-$(".sl").slick();
+$(".sl").slick({
+  arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    responsive: [
+        {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 380,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        }
+    ],
+    autoplay: true,
+    autoplaySpeed: 1000,
+    speed: 2000
+});
 
 $('#form').validate();
 $('#email').validate();
