@@ -1,0 +1,42 @@
+[
+	{
+	"id": "image01",
+	"image": "/images/logo1.png"
+	},
+
+	{
+	"id": "image02",
+	"image": "/images/logo2.png"
+	},
+
+	{
+	"id": "image03",
+	"image": "/images/logo3.png"
+	},
+
+	{
+	"id": "image04",
+	"image": "/images/logo4.png"
+	},
+
+	{
+	"id": "image05",
+	"image": "/images/logo5.png"
+	},
+
+	{
+	"id": "image06",
+	"image": "/images/logo6.png"
+	},
+
+	{
+	"id": "image07",
+	"image": "/images/logo7.png"
+	},
+
+	{
+	"id": "image08",
+	"image": "/images/logo8.png"
+	}
+	
+]

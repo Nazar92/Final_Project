@@ -27,6 +27,76 @@ $(".sl").slick({
 $('#form').validate();
 $('#email').validate();
 
+
+
+var xhr = new XMLHttpRequest();
+xhr.open("get", "/images.json");
+xhr.responseType = "json";
+xhr.send();
+
+var output = document.querySelector("#output");
+xhr.addEventListener("readystatechange", function (e) {
+    if (this.readyState !== this.DONE) {
+        return;
+    }
+    for (var i = 0; i < this.response.length; i++){
+        var 
+        curr = this.response[i];
+        td = document.createElement("td"),
+        imageCell = document.createElement("td"),
+        photoImg = document.createElement("img");
+
+      td.appendChild(imageCell);
+
+      photoImg.setAttribute("src", curr.image);
+    //   imageCell.appendChild(photoImg);
+
+    //   output.setAttribute("src", curr.image)
+      output.appendChild(photoImg);
+    }
+});
+
+
+
+
+
+
+
+// load images///////////////////////////////
+
+// loadImages();
+
+// $(".load_work").on("click", function () {
+//     loadImages();
+// });
+
+
+// function loadImages() {
+//     var xhr = new XMLHttpRequest();
+//     xhr.open('get', '/src/images.json');
+//     xhr.responseType = 'json';
+//     xhr.send();
+//     xhr.addEventListener('readystatechange', function () {
+//         if (this.readyState !== this.DONE) {
+//             return;
+//         }
+
+//         for (var i = 0; i < this.response.length; i++) {
+//             imagesArr.push(this.response[i].image);
+//         }
+//     });
+// };
+
+// vm.loadImages();
+
+
+
+
+
+
+
+
+
 // $('#form').ready() {
 //   $('#form').validate([
 //     name: {

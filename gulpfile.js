@@ -60,9 +60,10 @@ var
       "node_modules/knockout/build/output/knockout-latest.js",
       "node_modules/slideout/dist/slideout.min.js",
       "node_modules/slick-carousel/slick/slick.min.js",
-      "node_modules/jquery-validation/dist/jquery.validate.min.js"
+      "node_modules/jquery-validation/dist/jquery.validate.min.js",
       // "slick/slick.min.js"
-      // "node_modules/lightbox/dist/bundle-main.js"
+      "node_modules/lightbox/dist/bundle-main.js"
+      // "node_modules/ajax/lib/ajax.js"
       
     ])
     .pipe(plugins.concat("PlugDev.min.js"))
@@ -73,19 +74,19 @@ var
     return gulp.src("./images/*")
       .pipe(gulp.dest("dist/images"));
   });
-  // gulp.task("slick", function(){
-  //   return gulp.src("./slick/*")
-  //     .pipe(gulp.dest("dist/slick"));
-  // });
+  gulp.task("images:json", function(){
+    return gulp.src("./src/images.json")
+      .pipe(gulp.dest("dist"));
+  });
 
   gulp.task("clean", function(cb) {
-    del.sync("dist");
+    del.sync("dist/");
     cb();
   });
 
   gulp.task("build", ["clean"], function() {
     gulp.start 
-    (["html", "styles:app", "images", "js", "styles:vendor", "NMjs", "fonts:vendor"]);
+    (["html", "styles:app", "images", "js", "images:json", "styles:vendor", "NMjs", "fonts:vendor"]);
   });
 
   gulp.task("watch", ["build"], function() {

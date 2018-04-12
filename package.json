@@ -20,6 +20,7 @@
     "slideout": "^1.0.1"
   },
   "devDependencies": {
+    "ajax": "0.0.4",
     "browser-sync": "^2.23.6",
     "datetimepicker": "^0.1.38",
     "del": "^3.0.0",
